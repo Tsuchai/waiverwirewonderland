@@ -1,0 +1,66 @@
+# Generic Flutter/Dart files
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+*.iml
+*.g.dart
+
+# IDE-specific files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Android specific
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/key.properties
+android/.idea/
+android/captures/
+android/gradlew
+android/gradlew.bat
+android/gradle/wrapper/gradle-wrapper.jar
+
+# iOS specific
+ios/.symlinks/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+ios/.generated/
+ios/Pods/
+ios/.ios-plugins
+ios/Runner.xcworkspace/xcuserdata/
+ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+ios/Runner.xcodeproj/xcuserdata/
+ios/Flutter/AppFrameworkInfo.plist
+
+# Web specific
+web/index.html.old
+web/flutter_bootstrap.js
+
+# Linux specific
+linux/build/
+linux/flutter/generated_plugin_registrant.cc
+linux/flutter/generated_plugin_registrant.h
+linux/flutter/generated_plugins.cmake
+
+# macOS specific
+macos/build/
+macos/Flutter/GeneratedPluginRegistrant.swift
+macos/Flutter/ephemeral/
+macos/Flutter/Flutter-Generated.xcconfig
+
+# Windows specific
+windows/build/
+windows/flutter/generated_plugin_registrant.cc
+windows/flutter/generated_plugin_registrant.h
+windows/flutter/generated_plugins.cmake
+
+# Other common ignores
+*.log
+*.stackdump
+.env
+.env.*
