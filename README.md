@@ -3,6 +3,7 @@
 [![Version][version_badge_img]][version_url]
 [![Flutter][flutter_badge_img]][flutter_url]
 [![Dart][dart_badge_img]][dart_url]
+[![Riverpod][riverpod_badge_img]][riverpod_url]
 [![Python][python_badge_img]][python_url]
 
 Waiver Wire Wonderland is an basketball fantasy sports application that helps expedite the process in finding waiver-wire gems.
@@ -117,7 +118,7 @@ Smart Player Data: Adds filters to hide injured (IR) players and skip "Did Not P
 
 If you would like to see my prototype design diagram and the initial draft of the components, you can find that [here](https://docs.google.com/document/d/1OFG6acmsnLfNT7gUApdoP35CjEeEJ-wvR_prJ6WrMUA/edit?tab=t.0).
 
-[version_badge_img]: https://img.shields.io/badge/version-1.0-blue
+[version_badge_img]: https://img.shields.io/badge/version-1.1-blue
 [version_url]: https://github.com/your-username/your-repo/releases
 
 [flutter_badge_img]: https://img.shields.io/badge/Flutter-0468D7?logo=flutter&logoColor=white
@@ -125,6 +126,9 @@ If you would like to see my prototype design diagram and the initial draft of th
 
 [dart_badge_img]: https://img.shields.io/badge/Dart-0175C2?logo=dart&logoColor=white
 [dart_url]: https://dart.dev
+
+[riverpod_badge_img]: https://img.shields.io/pub/v/riverpod.svg?label=riverpod&color=blue
+[riverpod_url]: https://pub.dev/packages/riverpod
 
 [python_badge_img]: https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white
 [python_url]: https://www.python.org/

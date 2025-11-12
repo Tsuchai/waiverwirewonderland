@@ -11,12 +11,11 @@ class TeamScheduleCard extends StatelessWidget {
     required this.schedule,
   });
 
-  // Helper to convert a list of dates to a string of day abbreviations
+  // List to date convertor (DateFormat)
   String _getDaysString(List<DateTime> dates) {
     if (dates.isEmpty) {
       return 'No games';
     }
-    // Using DateFormat from the intl package to get the short weekday name (e.g., "Mon")
     return dates.map((date) => DateFormat.E().format(date).substring(0, 2)).join(', ');
   }
 
@@ -56,7 +55,7 @@ class TeamScheduleCard extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) => TeamRosterScreen(
-                teamAbbrev: schedule.teamName, // Assuming teamName is the abbreviation
+                teamAbbrev: schedule.teamName,
                 teamName: schedule.teamName,
               ),
             ),

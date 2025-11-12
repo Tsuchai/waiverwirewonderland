@@ -1,4 +1,4 @@
-import 'package:intl/intl.dart'; // Import for DateFormat if needed for other parsing, though DateTime.parse handles ISO 8601
+import 'package:intl/intl.dart'; // ISO 8061
 
 class TeamSchedule {
   final String teamName;
@@ -11,7 +11,7 @@ class TeamSchedule {
     required this.teamLogoUrl,
   });
 
-  // Helper to get the number of games
+
   int get gamesThisWeek => gameDates.length;
 
   factory TeamSchedule.fromJson(Map<String, dynamic> json) {
@@ -23,7 +23,7 @@ class TeamSchedule {
     return TeamSchedule(
       teamName: json['teamName'],
       gameDates: parsedGameDates,
-      teamLogoUrl: json['teamLogoUrl'] ?? '', // Handle potential null or missing
+      teamLogoUrl: json['teamLogoUrl'] ?? '',
     );
   }
 }

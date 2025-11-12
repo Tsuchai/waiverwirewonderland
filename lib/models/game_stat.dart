@@ -30,7 +30,6 @@ class GameStat {
   });
 
   factory GameStat.fromJson(Map<String, dynamic> json) {
-    // Helper to parse date format like "Nov 11, 2025"
     DateTime parseDate(String dateStr) {
       try {
         return DateFormat('MMM dd, yyyy').parse(dateStr);

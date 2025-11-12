@@ -49,12 +49,16 @@ class _TeamRosterScreenState extends ConsumerState<TeamRosterScreen> {
           Expanded(
             child: allPlayersAsync.when(
               data: (allPlayers) {
-                // First, get all players for the selected NBA team.
-                final teamPlayers = allPlayers.where((p) => p.team == widget.teamAbbrev).toList();
+                var teamAbbrev = widget.teamAbbrev;
+                if (teamAbbrev == 'PHI') {
+                  teamAbbrev = 'PHL';
+                } else if (teamAbbrev == 'PHX') {
+                  teamAbbrev = 'PHO';
+                }
+                final teamPlayers = allPlayers.where((p) => p.team == teamAbbrev).toList();
 
                 return myLeagueAsync.when(
                   data: (myLeagueTeams) {
-                    // Get all owned player IDs from the fantasy league.
                     final ownedPlayerIds = <int>{};
                     for (var team in myLeagueTeams) {
                       for (var player in team.players) {
@@ -62,7 +66,6 @@ class _TeamRosterScreenState extends ConsumerState<TeamRosterScreen> {
                       }
                     }
 
-                    // Filter the team's players based on the checkbox.
                     final filteredPlayers = _showAllPlayers
                         ? teamPlayers
                         : teamPlayers.where((p) => !ownedPlayerIds.contains(p.playerId)).toList();
@@ -74,7 +77,6 @@ class _TeamRosterScreenState extends ConsumerState<TeamRosterScreen> {
                     return ListView.builder(
                       itemCount: filteredPlayers.length,
                       itemBuilder: (context, index) {
-                        // On this screen, the "add" button should always be visible.
                         return PlayerCard(player: filteredPlayers[index]);
                       },
                     );

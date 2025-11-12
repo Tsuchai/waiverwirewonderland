@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:waiver_wire_wonderland/features/waiver_wire/best_available_players_list.dart';
 import 'package:waiver_wire_wonderland/features/waiver_wire/team_schedule_list.dart';
+import 'package:waiver_wire_wonderland/models/team_schedule.dart';
 import 'package:waiver_wire_wonderland/providers/waiver_wire_providers.dart';
 
 enum WaiverViewMode { bestAvailable, teamSchedule }
@@ -17,6 +18,51 @@ class _WaiverWireScreenState extends ConsumerState<WaiverWireScreen> {
   WaiverViewMode _selectedMode = WaiverViewMode.bestAvailable;
   bool _showAllPlayers = false;
   String _selectedWeek = '1'; // Default to week 1
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeSelectedWeek();
+  }
+
+  void _initializeSelectedWeek() async {
+    final scheduleMap = await ref.read(fullScheduleProvider.future);
+    if (mounted) {
+      setState(() {
+        _selectedWeek = _getCurrentWeek(scheduleMap);
+      });
+    }
+  }
+
+  String _getCurrentWeek(Map<String, List<TeamSchedule>> scheduleMap) {
+    final now = DateTime.now();
+    String currentWeek = '1'; // Default to week 1 if no matching week is found
+
+    final sortedWeeks = scheduleMap.keys.toList()
+      ..sort((a, b) => int.parse(a).compareTo(int.parse(b)));
+
+    for (final week in sortedWeeks) {
+      final teamSchedules = scheduleMap[week];
+      if (teamSchedules != null) {
+        // Check if any game date in this week is on or after today
+        final hasFutureGame = teamSchedules.any((teamSchedule) {
+          return teamSchedule.gameDates.any((gameDate) {
+            // Compare only date parts, ignore time
+            return gameDate.year == now.year &&
+                gameDate.month == now.month &&
+                gameDate.day == now.day ||
+                gameDate.isAfter(now);
+          });
+        });
+
+        if (hasFutureGame) {
+          currentWeek = week;
+          break;
+        }
+      }
+    }
+    return currentWeek;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +97,7 @@ class _WaiverWireScreenState extends ConsumerState<WaiverWireScreen> {
               },
             ),
           ),
-          // Conditional controls based on view mode
+
           if (_selectedMode == WaiverViewMode.bestAvailable)
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -92,13 +138,13 @@ class _WaiverWireScreenState extends ConsumerState<WaiverWireScreen> {
                   ),
                 );
               },
-              loading: () => const SizedBox.shrink(), // Don't show anything while loading schedule for dropdown
+              loading: () => const SizedBox.shrink(),
               error: (e, s) => Text('Error loading schedule: $e'),
             ),
           Expanded(
             child: _selectedMode == WaiverViewMode.bestAvailable
                 ? BestAvailablePlayersList(showAllPlayers: _showAllPlayers)
-                : TeamScheduleList(selectedWeek: _selectedWeek), // Pass the selected week
+                : TeamScheduleList(selectedWeek: _selectedWeek),
           ),
         ],
       ),

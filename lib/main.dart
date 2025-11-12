@@ -6,7 +6,6 @@ import 'package:waiver_wire_wonderland/waiver_wire_screen.dart';
 
 void main() {
   runApp(
-    // Wrap the entire app in a ProviderScope to make Riverpod available.
     const ProviderScope(
       child: MyApp(),
     ),

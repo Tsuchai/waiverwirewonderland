@@ -24,11 +24,8 @@ class AllPlayers extends _$AllPlayers {
 class FullSchedule extends _$FullSchedule {
   @override
   Future<Map<String, List<TeamSchedule>>> build() async {
-    // Load the new comprehensive schedule file.
     final String jsonString = await rootBundle.loadString('assets/nba_weekly_schedule.json');
     final Map<String, dynamic> jsonMap = json.decode(jsonString);
-
-    // Parse the map into the expected type.
     final Map<String, List<TeamSchedule>> scheduleMap = {};
     jsonMap.forEach((week, teamsJson) {
       final teams = (teamsJson as List).map((teamJson) => TeamSchedule.fromJson(teamJson)).toList();
@@ -83,7 +80,7 @@ class MyLeague extends _$MyLeague {
         if (data['status'] == 'success') {
           final List<dynamic> teamsJson = data['teams'];
           final teams = teamsJson.map((json) => FantasyTeam.fromJson(json)).toList();
-          await _saveToFile(teams); // Save the new data
+          await _saveToFile(teams);
           state = AsyncValue.data(teams);
         } else {
           throw Exception('API Error: ${data['message']}');
@@ -97,13 +94,13 @@ class MyLeague extends _$MyLeague {
   }
 
   Future<void> deleteLeague() async {
-    state = const AsyncValue.loading(); // Show loading state during deletion
+    state = const AsyncValue.loading();
     try {
       final file = await _localFile;
       if (await file.exists()) {
         await file.delete();
       }
-      state = const AsyncValue.data([]); // Reset state to empty list
+      state = const AsyncValue.data([]);
     } catch (e) {
       state = AsyncValue.error(e, StackTrace.current);
     }

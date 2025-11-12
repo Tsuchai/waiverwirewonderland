@@ -65,7 +65,6 @@ class _ViewTeamScreenState extends ConsumerState<ViewTeamScreen> {
             );
           }
 
-          // Find the index of the default team, or default to the first team
           if (_selectedTeamIndex == null) {
             final defaultTeamIndex = teams.indexWhere((team) => team.teamName == _defaultTeamName);
             _selectedTeamIndex = defaultTeamIndex != -1 ? defaultTeamIndex : 0;
@@ -75,10 +74,8 @@ class _ViewTeamScreenState extends ConsumerState<ViewTeamScreen> {
 
           return Column(
             children: [
-              // 1. Dropdown Team Selector
               _buildTeamSelector(teams, selectedTeam),
               const Divider(),
-              // 2. Roster for the selected team
               Expanded(
                 child: allPlayersAsync.when(
                   data: (allPlayers) {

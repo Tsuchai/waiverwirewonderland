@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:waiver_wire_wonderland/models/player.dart';
-import 'package:intl/intl.dart'; // For date formatting
+import 'package:intl/intl.dart';
 
 class PlayerDetailScreen extends StatelessWidget {
   final Player player;
@@ -74,8 +74,8 @@ class PlayerDetailScreen extends StatelessWidget {
               )
             else
               ListView.builder(
-                shrinkWrap: true, // Important for nested ListViews
-                physics: const NeverScrollableScrollPhysics(), // Disable scrolling for nested ListView
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: player.gameLog.length,
                 itemBuilder: (context, index) {
                   final game = player.gameLog[index];
@@ -120,7 +120,7 @@ class PlayerDetailScreen extends StatelessWidget {
                   );
                 },
               ),
-            const SizedBox(height: 16), // Add some space at the bottom
+            const SizedBox(height: 16),
           ],
         ),
       ),

@@ -18,10 +18,8 @@ class BestAvailablePlayersList extends ConsumerWidget {
 
     return asyncPlayers.when(
       data: (players) {
-        // Also handle the states for the fantasy league data
         return asyncMyLeague.when(
           data: (myLeagueTeams) {
-            // Create a set of all player IDs that are on any fantasy team for efficient lookup.
             final ownedPlayerIds = <int>{};
             for (var team in myLeagueTeams) {
               for (var player in team.players) {
@@ -29,13 +27,12 @@ class BestAvailablePlayersList extends ConsumerWidget {
               }
             }
 
-            // Filter the list of all players.
             final filteredPlayers = showAllPlayers
                 ? players // If showAllPlayers is true, show everyone
-                : players.where((player) => !ownedPlayerIds.contains(player.playerId)).toList(); // Otherwise, only show players NOT in the owned set.
+                : players.where((player) => !ownedPlayerIds.contains(player.playerId)).toList();
 
-            // Sort players by average points in descending order
-            final sortedPlayers = [...filteredPlayers]; // Create a mutable copy
+            // Sort players by average points in descending order, need to change to more advanced search algorithm later
+            final sortedPlayers = [...filteredPlayers];
             sortedPlayers.sort((a, b) => b.avgPoints.compareTo(a.avgPoints));
 
             return ListView.builder(
@@ -46,7 +43,7 @@ class BestAvailablePlayersList extends ConsumerWidget {
               },
             );
           },
-          // Show a simplified loading/error state for the fantasy league data
+
           loading: () => const Center(child: CircularProgressIndicator()),
           error: (err, stack) => Center(child: Text('Could not load fantasy league to filter players: $err')),
         );

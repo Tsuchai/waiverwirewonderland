@@ -25,14 +25,13 @@ class TeamScheduleList extends ConsumerWidget {
           return Center(child: Text('No schedule data for Week $selectedWeek.'));
         }
 
-        // Sort schedules by gamesThisWeek in descending order
         final sortedSchedules = [...schedules];
         sortedSchedules.sort((a, b) => b.gamesThisWeek.compareTo(a.gamesThisWeek));
 
         // --- Calculate Date Range ---
         final firstGameDate = sortedSchedules.first.gameDates.first;
         DateTime getStartOfWeek(DateTime date) {
-          int daysToSubtract = date.weekday - 1; // Monday is 1
+          int daysToSubtract = date.weekday - 1;
           return date.subtract(Duration(days: daysToSubtract));
         }
         final startOfWeek = getStartOfWeek(firstGameDate);

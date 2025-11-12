@@ -4,12 +4,12 @@ import 'package:waiver_wire_wonderland/screens/player_detail_screen.dart'; // Im
 
 class PlayerCard extends StatelessWidget {
   final Player player;
-  final bool showAddButton; // New parameter
+  final bool showAddButton;
 
   const PlayerCard({
     super.key,
     required this.player,
-    this.showAddButton = true, // Default to true
+    this.showAddButton = true,
   });
 
   @override
@@ -61,7 +61,6 @@ class PlayerCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 16),
-              // Conditionally render the add button
               if (showAddButton)
                 IconButton(
                   icon: const Icon(Icons.add_circle_outline, color: Colors.green, size: 30),
