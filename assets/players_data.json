@@ -1,0 +1,409 @@
+[
+  {
+    "id": "1",
+    "name": "Nikola Jokic",
+    "position": ["C"],
+    "team": "DEN",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3112335.png",
+    "jerseyNumber": 15,
+    "avgPoints": 26.4, "avgRebounds": 12.4, "avgAssists": 9.0, "avgSteals": 1.4, "avgBlocks": 0.9, "avgTurnovers": 3.0, "avgFieldGoalPercentage": 0.583, "avgFreeThrowPercentage": 0.817, "avgThreePointersMade": 1.2,
+    "gameLog": [
+      {"date": "2025-11-10T00:00:00.000Z", "opponent": "LAL", "minutes": 34.5, "points": 29, "rebounds": 13, "assists": 11, "steals": 2, "blocks": 1, "turnovers": 4},
+      {"date": "2025-11-08T00:00:00.000Z", "opponent": "GSW", "minutes": 32.1, "points": 22, "rebounds": 11, "assists": 8, "steals": 1, "blocks": 0, "turnovers": 2}
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Shai Gilgeous-Alexander",
+    "position": ["PG", "SG"],
+    "team": "OKC",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4278073.png",
+    "jerseyNumber": 2,
+    "avgPoints": 30.1, "avgRebounds": 5.5, "avgAssists": 6.2, "avgSteals": 2.0, "avgBlocks": 0.9, "avgTurnovers": 2.2, "avgFieldGoalPercentage": 0.535, "avgFreeThrowPercentage": 0.874, "avgThreePointersMade": 1.3,
+    "gameLog": [
+      {"date": "2025-11-09T00:00:00.000Z", "opponent": "SAC", "minutes": 35.8, "points": 33, "rebounds": 4, "assists": 7, "steals": 3, "blocks": 1, "turnovers": 2}
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Victor Wembanyama",
+    "position": ["PF", "C"],
+    "team": "SAS",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/5105725.png",
+    "jerseyNumber": 1,
+    "avgPoints": 21.4, "avgRebounds": 10.6, "avgAssists": 3.9, "avgSteals": 1.2, "avgBlocks": 3.6, "avgTurnovers": 3.7, "avgFieldGoalPercentage": 0.465, "avgFreeThrowPercentage": 0.793, "avgThreePointersMade": 1.8,
+    "gameLog": [
+      {"date": "2025-11-10T00:00:00.000Z", "opponent": "HOU", "minutes": 31.0, "points": 25, "rebounds": 12, "assists": 4, "steals": 1, "blocks": 5, "turnovers": 5}
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Luka Doncic",
+    "position": ["PG"],
+    "team": "DAL",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3945274.png",
+    "jerseyNumber": 77,
+    "avgPoints": 33.9, "avgRebounds": 9.2, "avgAssists": 9.8, "avgSteals": 1.4, "avgBlocks": 0.5, "avgTurnovers": 4.0, "avgFieldGoalPercentage": 0.487, "avgFreeThrowPercentage": 0.786, "avgThreePointersMade": 4.1,
+    "gameLog": []
+  },
+  {
+    "id": "5",
+    "name": "Giannis Antetokounmpo",
+    "position": ["PF"],
+    "team": "MIL",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3032977.png",
+    "jerseyNumber": 34,
+    "avgPoints": 30.4, "avgRebounds": 11.5, "avgAssists": 6.5, "avgSteals": 1.2, "avgBlocks": 1.1, "avgTurnovers": 3.4, "avgFieldGoalPercentage": 0.611, "avgFreeThrowPercentage": 0.657, "avgThreePointersMade": 0.5,
+    "gameLog": []
+  },
+  {
+    "id": "6",
+    "name": "Stephen Curry",
+    "position": ["PG"],
+    "team": "GSW",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3975.png",
+    "jerseyNumber": 30,
+    "avgPoints": 26.4, "avgRebounds": 4.5, "avgAssists": 5.1, "avgSteals": 0.7, "avgBlocks": 0.4, "avgTurnovers": 2.9, "avgFieldGoalPercentage": 0.450, "avgFreeThrowPercentage": 0.923, "avgThreePointersMade": 4.8,
+    "gameLog": []
+  },
+  {
+    "id": "7",
+    "name": "Jayson Tatum",
+    "position": ["SF", "PF"],
+    "team": "BOS",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4065648.png",
+    "jerseyNumber": 0,
+    "avgPoints": 26.9, "avgRebounds": 8.1, "avgAssists": 4.9, "avgSteals": 1.0, "avgBlocks": 0.6, "avgTurnovers": 2.5, "avgFieldGoalPercentage": 0.471, "avgFreeThrowPercentage": 0.854, "avgThreePointersMade": 3.1,
+    "gameLog": []
+  },
+  {
+    "id": "8",
+    "name": "Kevin Durant",
+    "position": ["SF", "PF"],
+    "team": "PHX",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3202.png",
+    "jerseyNumber": 35,
+    "avgPoints": 27.1, "avgRebounds": 6.6, "avgAssists": 5.0, "avgSteals": 0.7, "avgBlocks": 1.2, "avgTurnovers": 3.3, "avgFieldGoalPercentage": 0.523, "avgFreeThrowPercentage": 0.856, "avgThreePointersMade": 2.2,
+    "gameLog": []
+  },
+  {
+    "id": "9",
+    "name": "Anthony Edwards",
+    "position": ["SG"],
+    "team": "MIN",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4594268.png",
+    "jerseyNumber": 5,
+    "avgPoints": 25.9, "avgRebounds": 5.4, "avgAssists": 5.1, "avgSteals": 1.3, "avgBlocks": 0.5, "avgTurnovers": 3.1, "avgFieldGoalPercentage": 0.461, "avgFreeThrowPercentage": 0.836, "avgThreePointersMade": 2.4,
+    "gameLog": []
+  },
+  {
+    "id": "10",
+    "name": "Tyrese Haliburton",
+    "position": ["PG"],
+    "team": "IND",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432164.png",
+    "jerseyNumber": 0,
+    "avgPoints": 20.1, "avgRebounds": 3.7, "avgAssists": 10.9, "avgSteals": 1.2, "avgBlocks": 0.7, "avgTurnovers": 2.3, "avgFieldGoalPercentage": 0.477, "avgFreeThrowPercentage": 0.855, "avgThreePointersMade": 2.8,
+    "gameLog": []
+  },
+  {
+    "id": "11",
+    "name": "LeBron James",
+    "position": ["SF", "PF"],
+    "team": "LAL",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/1966.png",
+    "jerseyNumber": 23,
+    "avgPoints": 25.7, "avgRebounds": 7.3, "avgAssists": 8.3, "avgSteals": 1.3, "avgBlocks": 0.5, "avgTurnovers": 3.5, "avgFieldGoalPercentage": 0.540, "avgFreeThrowPercentage": 0.750, "avgThreePointersMade": 2.2,
+    "gameLog": []
+  },
+  {
+    "id": "12",
+    "name": "Anthony Davis",
+    "position": ["PF", "C"],
+    "team": "LAL",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6583.png",
+    "jerseyNumber": 3,
+    "avgPoints": 24.7, "avgRebounds": 12.5, "avgAssists": 2.6, "avgSteals": 1.2, "avgBlocks": 2.3, "avgTurnovers": 2.1, "avgFieldGoalPercentage": 0.563, "avgFreeThrowPercentage": 0.813, "avgThreePointersMade": 0.4,
+    "gameLog": []
+  },
+  {
+    "id": "13",
+    "name": "LaMelo Ball",
+    "position": ["PG"],
+    "team": "CHA",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432816.png",
+    "jerseyNumber": 1,
+    "avgPoints": 23.9, "avgRebounds": 5.1, "avgAssists": 8.0, "avgSteals": 1.8, "avgBlocks": 0.3, "avgTurnovers": 3.2, "avgFieldGoalPercentage": 0.411, "avgFreeThrowPercentage": 0.856, "avgThreePointersMade": 3.8,
+    "gameLog": []
+  },
+  {
+    "id": "14",
+    "name": "Devin Booker",
+    "position": ["SG", "PG"],
+    "team": "PHX",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3136193.png",
+    "jerseyNumber": 1,
+    "avgPoints": 27.1, "avgRebounds": 4.5, "avgAssists": 6.9, "avgSteals": 0.9, "avgBlocks": 0.4, "avgTurnovers": 2.7, "avgFieldGoalPercentage": 0.494, "avgFreeThrowPercentage": 0.855, "avgThreePointersMade": 2.1,
+    "gameLog": []
+  },
+  {
+    "id": "15",
+    "name": "Zion Williamson",
+    "position": ["PF"],
+    "team": "NOP",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4395628.png",
+    "jerseyNumber": 1,
+    "avgPoints": 22.9, "avgRebounds": 5.8, "avgAssists": 5.0, "avgSteals": 1.1, "avgBlocks": 0.4, "avgTurnovers": 2.7, "avgFieldGoalPercentage": 0.578, "avgFreeThrowPercentage": 0.702, "avgThreePointersMade": 0.4,
+    "gameLog": []
+  },
+  {
+    "id": "16",
+    "name": "Chet Holmgren",
+    "position": ["C"],
+    "team": "OKC",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4871139.png",
+    "jerseyNumber": 7,
+    "avgPoints": 16.5, "avgRebounds": 7.9, "avgAssists": 2.4, "avgSteals": 0.6, "avgBlocks": 2.3, "avgTurnovers": 1.7, "avgFieldGoalPercentage": 0.549, "avgFreeThrowPercentage": 0.790, "avgThreePointersMade": 1.6,
+    "gameLog": []
+  },
+  {
+    "id": "17",
+    "name": "Alperen Sengun",
+    "position": ["C"],
+    "team": "HOU",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4871146.png",
+    "jerseyNumber": 28,
+    "avgPoints": 21.1, "avgRebounds": 9.3, "avgAssists": 5.0, "avgSteals": 1.2, "avgBlocks": 0.7, "avgTurnovers": 2.6, "avgFieldGoalPercentage": 0.553, "avgFreeThrowPercentage": 0.693, "avgThreePointersMade": 0.3,
+    "gameLog": []
+  },
+  {
+    "id": "18",
+    "name": "Jamal Murray",
+    "position": ["PG"],
+    "team": "DEN",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3936299.png",
+    "jerseyNumber": 27,
+    "avgPoints": 21.4, "avgRebounds": 4.1, "avgAssists": 6.5, "avgSteals": 1.0, "avgBlocks": 0.7, "avgTurnovers": 2.4, "avgFieldGoalPercentage": 0.481, "avgFreeThrowPercentage": 0.844, "avgThreePointersMade": 2.6,
+    "gameLog": []
+  },
+  {
+    "id": "19",
+    "name": "De'Aaron Fox",
+    "position": ["PG"],
+    "team": "SAC",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277888.png",
+    "jerseyNumber": 5,
+    "avgPoints": 26.6, "avgRebounds": 4.6, "avgAssists": 5.6, "avgSteals": 1.7, "avgBlocks": 0.4, "avgTurnovers": 2.8, "avgFieldGoalPercentage": 0.465, "avgFreeThrowPercentage": 0.759, "avgThreePointersMade": 2.9,
+    "gameLog": []
+  },
+  {
+    "id": "20",
+    "name": "Kawhi Leonard",
+    "position": ["SF"],
+    "team": "LAC",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6450.png",
+    "jerseyNumber": 2,
+    "avgPoints": 23.7, "avgRebounds": 6.1, "avgAssists": 3.6, "avgSteals": 1.6, "avgBlocks": 0.5, "avgTurnovers": 1.7, "avgFieldGoalPercentage": 0.525, "avgFreeThrowPercentage": 0.885, "avgThreePointersMade": 2.1,
+    "gameLog": []
+  },
+  {
+    "id": "21",
+    "name": "Paul George",
+    "position": ["SG", "SF"],
+    "team": "LAC",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4251.png",
+    "jerseyNumber": 13,
+    "avgPoints": 22.6, "avgRebounds": 5.2, "avgAssists": 3.5, "avgSteals": 1.5, "avgBlocks": 0.4, "avgTurnovers": 2.4, "avgFieldGoalPercentage": 0.457, "avgFreeThrowPercentage": 0.907, "avgThreePointersMade": 3.3,
+    "gameLog": []
+  },
+  {
+    "id": "22",
+    "name": "Donovan Mitchell",
+    "position": ["SG"],
+    "team": "CLE",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066422.png",
+    "jerseyNumber": 45,
+    "avgPoints": 26.6, "avgRebounds": 5.1, "avgAssists": 6.1, "avgSteals": 1.8, "avgBlocks": 0.5, "avgTurnovers": 2.8, "avgFieldGoalPercentage": 0.462, "avgFreeThrowPercentage": 0.864, "avgThreePointersMade": 3.3,
+    "gameLog": []
+  },
+  {
+    "id": "23",
+    "name": "Bam Adebayo",
+    "position": ["C"],
+    "team": "MIA",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066261.png",
+    "jerseyNumber": 13,
+    "avgPoints": 19.3, "avgRebounds": 10.4, "avgAssists": 3.9, "avgSteals": 1.1, "avgBlocks": 0.9, "avgTurnovers": 2.5, "avgFieldGoalPercentage": 0.521, "avgFreeThrowPercentage": 0.799, "avgThreePointersMade": 0.0,
+    "gameLog": []
+  },
+  {
+    "id": "24",
+    "name": "Jimmy Butler",
+    "position": ["SF"],
+    "team": "MIA",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6430.png",
+    "jerseyNumber": 22,
+    "avgPoints": 20.8, "avgRebounds": 5.3, "avgAssists": 5.0, "avgSteals": 1.8, "avgBlocks": 0.3, "avgTurnovers": 1.6, "avgFieldGoalPercentage": 0.499, "avgFreeThrowPercentage": 0.850, "avgThreePointersMade": 0.4,
+    "gameLog": []
+  },
+  {
+    "id": "25",
+    "name": "Trae Young",
+    "position": ["PG"],
+    "team": "ATL",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4277905.png",
+    "jerseyNumber": 11,
+    "avgPoints": 25.7, "avgRebounds": 3.0, "avgAssists": 10.8, "avgSteals": 1.3, "avgBlocks": 0.2, "avgTurnovers": 4.4, "avgFieldGoalPercentage": 0.430, "avgFreeThrowPercentage": 0.886, "avgThreePointersMade": 3.1,
+    "gameLog": []
+  },
+  {
+    "id": "26",
+    "name": "Kyrie Irving",
+    "position": ["PG", "SG"],
+    "team": "DAL",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6442.png",
+    "jerseyNumber": 11,
+    "avgPoints": 25.6, "avgRebounds": 5.0, "avgAssists": 5.2, "avgSteals": 1.3, "avgBlocks": 0.5, "avgTurnovers": 2.1, "avgFieldGoalPercentage": 0.497, "avgFreeThrowPercentage": 0.905, "avgThreePointersMade": 3.0,
+    "gameLog": []
+  },
+  {
+    "id": "27",
+    "name": "Damian Lillard",
+    "position": ["PG"],
+    "team": "MIL",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/6606.png",
+    "jerseyNumber": 0,
+    "avgPoints": 24.3, "avgRebounds": 4.4, "avgAssists": 7.0, "avgSteals": 0.8, "avgBlocks": 0.2, "avgTurnovers": 2.8, "avgFieldGoalPercentage": 0.424, "avgFreeThrowPercentage": 0.914, "avgThreePointersMade": 3.1,
+    "gameLog": []
+  },
+  {
+    "id": "28",
+    "name": "Jaylen Brown",
+    "position": ["SG", "SF"],
+    "team": "BOS",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3917376.png",
+    "jerseyNumber": 7,
+    "avgPoints": 23.0, "avgRebounds": 5.5, "avgAssists": 3.6, "avgSteals": 1.1, "avgBlocks": 0.4, "avgTurnovers": 2.7, "avgFieldGoalPercentage": 0.499, "avgFreeThrowPercentage": 0.703, "avgThreePointersMade": 2.5,
+    "gameLog": []
+  },
+  {
+    "id": "29",
+    "name": "James Harden",
+    "position": ["PG", "SG"],
+    "team": "LAC",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3992.png",
+    "jerseyNumber": 1,
+    "avgPoints": 16.6, "avgRebounds": 5.1, "avgAssists": 8.5, "avgSteals": 1.1, "avgBlocks": 0.8, "avgTurnovers": 3.3, "avgFieldGoalPercentage": 0.442, "avgFreeThrowPercentage": 0.878, "avgThreePointersMade": 2.3,
+    "gameLog": []
+  },
+  {
+    "id": "30",
+    "name": "Paolo Banchero",
+    "position": ["PF"],
+    "team": "ORL",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4683554.png",
+    "jerseyNumber": 5,
+    "avgPoints": 22.6, "avgRebounds": 6.9, "avgAssists": 5.4, "avgSteals": 1.1, "avgBlocks": 0.6, "avgTurnovers": 3.1, "avgFieldGoalPercentage": 0.455, "avgFreeThrowPercentage": 0.725, "avgThreePointersMade": 1.5,
+    "gameLog": []
+  },
+  {
+    "id": "31",
+    "name": "Scottie Barnes",
+    "position": ["PG", "SF"],
+    "team": "TOR",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4683520.png",
+    "jerseyNumber": 4,
+    "avgPoints": 19.9, "avgRebounds": 8.2, "avgAssists": 6.1, "avgSteals": 1.3, "avgBlocks": 1.5, "avgTurnovers": 2.7, "avgFieldGoalPercentage": 0.475, "avgFreeThrowPercentage": 0.781, "avgThreePointersMade": 1.7,
+    "gameLog": []
+  },
+  {
+    "id": "32",
+    "name": "Jalen Brunson",
+    "position": ["PG"],
+    "team": "NYK",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3913172.png",
+    "jerseyNumber": 11,
+    "avgPoints": 28.7, "avgRebounds": 3.6, "avgAssists": 6.7, "avgSteals": 0.9, "avgBlocks": 0.2, "avgTurnovers": 2.2, "avgFieldGoalPercentage": 0.485, "avgFreeThrowPercentage": 0.847, "avgThreePointersMade": 2.7,
+    "gameLog": []
+  },
+  {
+    "id": "33",
+    "name": "Karl-Anthony Towns",
+    "position": ["PF", "C"],
+    "team": "MIN",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3136195.png",
+    "jerseyNumber": 32,
+    "avgPoints": 21.8, "avgRebounds": 8.3, "avgAssists": 3.0, "avgSteals": 0.7, "avgBlocks": 0.5, "avgTurnovers": 2.8, "avgFieldGoalPercentage": 0.504, "avgFreeThrowPercentage": 0.873, "avgThreePointersMade": 2.2,
+    "gameLog": []
+  },
+  {
+    "id": "34",
+    "name": "Domantas Sabonis",
+    "position": ["C"],
+    "team": "SAC",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3914770.png",
+    "jerseyNumber": 10,
+    "avgPoints": 19.4, "avgRebounds": 13.7, "avgAssists": 8.2, "avgSteals": 0.9, "avgBlocks": 0.6, "avgTurnovers": 3.4, "avgFieldGoalPercentage": 0.594, "avgFreeThrowPercentage": 0.704, "avgThreePointersMade": 0.4,
+    "gameLog": []
+  },
+  {
+    "id": "35",
+    "name": "Brandon Ingram",
+    "position": ["SF", "PG"],
+    "team": "NOP",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3913176.png",
+    "jerseyNumber": 14,
+    "avgPoints": 20.8, "avgRebounds": 5.1, "avgAssists": 5.7, "avgSteals": 0.8, "avgBlocks": 0.6, "avgTurnovers": 2.7, "avgFieldGoalPercentage": 0.492, "avgFreeThrowPercentage": 0.801, "avgThreePointersMade": 1.2,
+    "gameLog": []
+  },
+  {
+    "id": "36",
+    "name": "Lauri Markkanen",
+    "position": ["PF"],
+    "team": "UTA",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4066336.png",
+    "jerseyNumber": 23,
+    "avgPoints": 23.2, "avgRebounds": 8.2, "avgAssists": 2.0, "avgSteals": 0.9, "avgBlocks": 0.8, "avgTurnovers": 1.9, "avgFieldGoalPercentage": 0.480, "avgFreeThrowPercentage": 0.875, "avgThreePointersMade": 3.0,
+    "gameLog": []
+  },
+  {
+    "id": "37",
+    "name": "Dejounte Murray",
+    "position": ["PG", "SG"],
+    "team": "ATL",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3913179.png",
+    "jerseyNumber": 5,
+    "avgPoints": 22.5, "avgRebounds": 4.4, "avgAssists": 5.3, "avgSteals": 1.4, "avgBlocks": 0.3, "avgTurnovers": 2.1, "avgFieldGoalPercentage": 0.459, "avgFreeThrowPercentage": 0.832, "avgThreePointersMade": 2.6,
+    "gameLog": []
+  },
+  {
+    "id": "38",
+    "name": "Kristaps Porzingis",
+    "position": ["C", "PF"],
+    "team": "BOS",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/3136196.png",
+    "jerseyNumber": 8,
+    "avgPoints": 20.1, "avgRebounds": 7.2, "avgAssists": 2.0, "avgSteals": 0.7, "avgBlocks": 1.9, "avgTurnovers": 1.6, "avgFieldGoalPercentage": 0.516, "avgFreeThrowPercentage": 0.859, "avgThreePointersMade": 1.9,
+    "gameLog": []
+  },
+  {
+    "id": "39",
+    "name": "Darius Garland",
+    "position": ["PG"],
+    "team": "CLE",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4396910.png",
+    "jerseyNumber": 10,
+    "avgPoints": 18.0, "avgRebounds": 2.7, "avgAssists": 6.5, "avgSteals": 1.3, "avgBlocks": 0.1, "avgTurnovers": 2.9, "avgFieldGoalPercentage": 0.448, "avgFreeThrowPercentage": 0.834, "avgThreePointersMade": 2.3,
+    "gameLog": []
+  },
+  {
+    "id": "40",
+    "name": "Cade Cunningham",
+    "position": ["PG"],
+    "team": "DET",
+    "imageUrl": "https://a.espncdn.com/combiner/i?img=/i/headshots/nba/players/full/4432866.png",
+    "jerseyNumber": 2,
+    "avgPoints": 22.7, "avgRebounds": 4.3, "avgAssists": 7.5, "avgSteals": 0.9, "avgBlocks": 0.3, "avgTurnovers": 3.5, "avgFieldGoalPercentage": 0.415, "avgFreeThrowPercentage": 0.864, "avgThreePointersMade": 1.9,
+    "gameLog": []
+  }
+]

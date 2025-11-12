@@ -21,7 +21,7 @@ This project is a starting point for a Flutter application.
 
 **Clone the repository:**
 ```sh
-git clone <your-repository-url>
+git clone https://github.com/Tsuchai/waiverwirewonderland
 ```
 
 **Navigate to the project directory:**

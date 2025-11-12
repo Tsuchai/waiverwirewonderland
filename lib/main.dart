@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:waiver_wire_wonderland/import_team_screen.dart';
 import 'package:waiver_wire_wonderland/view_team_screen.dart';
 import 'package:waiver_wire_wonderland/waiver_wire_screen.dart';
 
@@ -75,10 +76,9 @@ class HomePage extends StatelessWidget {
               icon: const Icon(Icons.file_upload),
               label: const Text('Import Team'),
               onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('Import functionality coming soon!'),
-                  ),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ImportTeamScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(
