@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:waiver_wire_wonderland/models/team_schedule.dart';
+import 'package:waiver_wire_wonderland/screens/team_roster_screen.dart';
 
 class TeamScheduleCard extends StatelessWidget {
   final TeamSchedule schedule;
@@ -9,20 +11,56 @@ class TeamScheduleCard extends StatelessWidget {
     required this.schedule,
   });
 
+  // Helper to convert a list of dates to a string of day abbreviations
+  String _getDaysString(List<DateTime> dates) {
+    if (dates.isEmpty) {
+      return 'No games';
+    }
+    // Using DateFormat from the intl package to get the short weekday name (e.g., "Mon")
+    return dates.map((date) => DateFormat.E().format(date).substring(0, 2)).join(', ');
+  }
+
   @override
   Widget build(BuildContext context) {
+    final gameCount = schedule.gamesThisWeek;
+    final daysString = _getDaysString(schedule.gameDates);
+
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: ListTile(
         leading: CircleAvatar(
-          // In a real app, you'd use an Image.network(schedule.teamLogoUrl)
-          child: Text(schedule.gamesThisWeek.toString()),
+          radius: 25,
+          child: Text(
+            gameCount.toString(),
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
         ),
         title: Text(schedule.teamName),
-        subtitle: Text('${schedule.gamesThisWeek} games this week'),
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('$gameCount games this week'),
+            const SizedBox(height: 4),
+            Text(
+              daysString,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Theme.of(context).colorScheme.primary,
+              ),
+            ),
+          ],
+        ),
         trailing: const Icon(Icons.arrow_forward_ios),
         onTap: () {
-          // Handle navigating to a list of players for this team
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => TeamRosterScreen(
+                teamAbbrev: schedule.teamName, // Assuming teamName is the abbreviation
+                teamName: schedule.teamName,
+              ),
+            ),
+          );
         },
       ),
     );

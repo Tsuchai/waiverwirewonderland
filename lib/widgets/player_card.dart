@@ -4,10 +4,12 @@ import 'package:waiver_wire_wonderland/screens/player_detail_screen.dart'; // Im
 
 class PlayerCard extends StatelessWidget {
   final Player player;
+  final bool showAddButton; // New parameter
 
   const PlayerCard({
     super.key,
     required this.player,
+    this.showAddButton = true, // Default to true
   });
 
   @override
@@ -59,16 +61,17 @@ class PlayerCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 16),
-              // The green plus button remains separate for its own action
-              IconButton(
-                icon: const Icon(Icons.add_circle_outline, color: Colors.green, size: 30),
-                onPressed: () {
-                  // Handle adding player to team - this will be implemented next
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('Add ${player.name} to team (not yet implemented)')),
-                  );
-                },
-              ),
+              // Conditionally render the add button
+              if (showAddButton)
+                IconButton(
+                  icon: const Icon(Icons.add_circle_outline, color: Colors.green, size: 30),
+                  onPressed: () {
+                    // Handle adding player to team - this will be implemented next
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Add ${player.name} to team (not yet implemented)')),
+                    );
+                  },
+                ),
             ],
           ),
         ),

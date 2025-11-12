@@ -2,11 +2,11 @@ import 'package:waiver_wire_wonderland/models/game_stat.dart';
 
 class Player {
   final String id;
+  final int playerId; // Added for linking with fantasy data
   final String name;
   final List<String> position;
   final String team;
   final String imageUrl;
-  final int jerseyNumber;
 
   // Season Averages (for 9-cat)
   final double avgPoints;
@@ -23,11 +23,11 @@ class Player {
 
   const Player({
     required this.id,
+    required this.playerId,
     required this.name,
     required this.position,
     required this.team,
     this.imageUrl = '',
-    this.jerseyNumber = 0,
     this.avgPoints = 0.0,
     this.avgRebounds = 0.0,
     this.avgAssists = 0.0,
@@ -46,11 +46,11 @@ class Player {
 
     return Player(
       id: json['id'],
+      playerId: json['playerId'] ?? 0, // Add playerId parsing
       name: json['name'],
       position: List<String>.from(json['position']),
       team: json['team'],
       imageUrl: json['imageUrl'] ?? '',
-      jerseyNumber: json['jerseyNumber'] ?? 0,
       avgPoints: (json['avgPoints'] as num).toDouble(),
       avgRebounds: (json['avgRebounds'] as num).toDouble(),
       avgAssists: (json['avgAssists'] as num).toDouble(),

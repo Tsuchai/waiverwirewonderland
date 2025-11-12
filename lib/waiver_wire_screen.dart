@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart'; // Import for ConsumerWidget
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:waiver_wire_wonderland/features/waiver_wire/best_available_players_list.dart';
 import 'package:waiver_wire_wonderland/features/waiver_wire/team_schedule_list.dart';
+import 'package:waiver_wire_wonderland/providers/waiver_wire_providers.dart';
 
 enum WaiverViewMode { bestAvailable, teamSchedule }
 
-class WaiverWireScreen extends StatefulWidget {
+class WaiverWireScreen extends ConsumerStatefulWidget {
   const WaiverWireScreen({super.key});
 
   @override
-  State<WaiverWireScreen> createState() => _WaiverWireScreenState();
+  ConsumerState<WaiverWireScreen> createState() => _WaiverWireScreenState();
 }
 
-class _WaiverWireScreenState extends State<WaiverWireScreen> {
+class _WaiverWireScreenState extends ConsumerState<WaiverWireScreen> {
   WaiverViewMode _selectedMode = WaiverViewMode.bestAvailable;
+  bool _showAllPlayers = false;
+  String _selectedWeek = '1'; // Default to week 1
 
   @override
   Widget build(BuildContext context) {
+    final fullScheduleAsync = ref.watch(fullScheduleProvider);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Waiver Wire'),
@@ -44,17 +49,56 @@ class _WaiverWireScreenState extends State<WaiverWireScreen> {
                   _selectedMode = newSelection.first;
                 });
               },
-              style: SegmentedButton.styleFrom(
-                // Ensure the button takes available width
-                // This might require wrapping in a Row with MainAxisAlignment.spaceAround
-                // or adjusting constraints if needed for full width.
-              ),
             ),
           ),
+          // Conditional controls based on view mode
+          if (_selectedMode == WaiverViewMode.bestAvailable)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: CheckboxListTile(
+                title: const Text('Show players on fantasy rosters'),
+                value: _showAllPlayers,
+                onChanged: (bool? value) {
+                  setState(() {
+                    _showAllPlayers = value ?? false;
+                  });
+                },
+                controlAffinity: ListTileControlAffinity.leading,
+                dense: true,
+              ),
+            ),
+          if (_selectedMode == WaiverViewMode.teamSchedule)
+            fullScheduleAsync.when(
+              data: (scheduleMap) {
+                final weeks = scheduleMap.keys.toList();
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: DropdownButton<String>(
+                    value: _selectedWeek,
+                    isExpanded: true,
+                    items: weeks.map((week) {
+                      return DropdownMenuItem(
+                        value: week,
+                        child: Text('Week $week'),
+                      );
+                    }).toList(),
+                    onChanged: (String? newWeek) {
+                      if (newWeek != null) {
+                        setState(() {
+                          _selectedWeek = newWeek;
+                        });
+                      }
+                    },
+                  ),
+                );
+              },
+              loading: () => const SizedBox.shrink(), // Don't show anything while loading schedule for dropdown
+              error: (e, s) => Text('Error loading schedule: $e'),
+            ),
           Expanded(
             child: _selectedMode == WaiverViewMode.bestAvailable
-                ? const BestAvailablePlayersList()
-                : const TeamScheduleList(),
+                ? BestAvailablePlayersList(showAllPlayers: _showAllPlayers)
+                : TeamScheduleList(selectedWeek: _selectedWeek), // Pass the selected week
           ),
         ],
       ),

@@ -44,7 +44,6 @@ class PlayerDetailScreen extends StatelessWidget {
                           style: const TextStyle(fontSize: 16, color: Colors.grey),
                         ),
                         const SizedBox(height: 8),
-                        Text('Jersey: ${player.jerseyNumber}', style: const TextStyle(fontSize: 14)),
                       ],
                     ),
                   ),
@@ -87,20 +86,32 @@ class PlayerDetailScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            '${DateFormat.yMMMd().format(game.date)} vs. ${game.opponent}',
-                            style: const TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          const SizedBox(height: 8),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              _buildStatColumn('MIN', game.minutes.toStringAsFixed(1)),
+                              Text(
+                                '${DateFormat.yMMMd().format(game.gameDate)} - ${game.matchup}',
+                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                              ),
+                              Text(
+                                game.wl,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: game.wl == 'W' ? Colors.green : Colors.red,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 8),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
                               _buildStatColumn('PTS', game.points.toString()),
                               _buildStatColumn('REB', game.rebounds.toString()),
                               _buildStatColumn('AST', game.assists.toString()),
                               _buildStatColumn('STL', game.steals.toString()),
                               _buildStatColumn('BLK', game.blocks.toString()),
+                              _buildStatColumn('3PM', game.threePointersMade.toString()),
                             ],
                           ),
                         ],
