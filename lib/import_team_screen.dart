@@ -28,9 +28,57 @@ class _ImportTeamScreenState extends ConsumerState<ImportTeamScreen> {
     }
   }
 
+  Future<void> _confirmAndDeleteLeague() async {
+    final bool? confirm = await showDialog<bool>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Confirm Deletion'),
+          content: const Text('Are you sure you want to delete your imported league data? This action cannot be undone.'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(false),
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(true),
+              child: const Text('Delete'),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (confirm == true) {
+      await ref.read(myLeagueProvider.notifier).deleteLeague();
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('League data deleted!')),
+        );
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final myLeagueAsyncValue = ref.watch(myLeagueProvider);
+
+    ref.listen<AsyncValue<List>>(myLeagueProvider, (previous, next) {
+      next.whenOrNull(
+        error: (error, stackTrace) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Error: ${error.toString()}')),
+          );
+        },
+        data: (data) {
+          if (data.isNotEmpty && previous?.value?.isEmpty == true) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('League imported successfully!')),
+            );
+          }
+        },
+      );
+    });
 
     return Scaffold(
       appBar: AppBar(
@@ -56,6 +104,18 @@ class _ImportTeamScreenState extends ConsumerState<ImportTeamScreen> {
               label: const Text('Import League'),
               onPressed: _importLeague,
               style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                textStyle: const TextStyle(fontSize: 18),
+              ),
+            ),
+            const SizedBox(height: 16), // Added spacing
+            ElevatedButton.icon(
+              onPressed: _confirmAndDeleteLeague,
+              icon: const Icon(Icons.delete_forever),
+              label: const Text('Delete Current League'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red, // Make it stand out
+                foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 textStyle: const TextStyle(fontSize: 18),
               ),

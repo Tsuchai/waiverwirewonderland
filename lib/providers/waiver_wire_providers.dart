@@ -95,4 +95,17 @@ class MyLeague extends _$MyLeague {
       state = AsyncValue.error(e, StackTrace.current);
     }
   }
+
+  Future<void> deleteLeague() async {
+    state = const AsyncValue.loading(); // Show loading state during deletion
+    try {
+      final file = await _localFile;
+      if (await file.exists()) {
+        await file.delete();
+      }
+      state = const AsyncValue.data([]); // Reset state to empty list
+    } catch (e) {
+      state = AsyncValue.error(e, StackTrace.current);
+    }
+  }
 }
